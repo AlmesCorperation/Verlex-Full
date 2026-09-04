@@ -1,0 +1,6 @@
+{
+  "name": "Verlex",
+  "description": "A 3D stud-based physics sandbox powered by Three.js with Newtonian physics, stud grid construction, avatar customization, and zero-cost P2P multiplayer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

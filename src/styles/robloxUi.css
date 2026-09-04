@@ -1,0 +1,431 @@
+/* Classic Roblox (2007-2015) Custom Cursors & Gaming UI Visual Styling */
+
+/* ==========================================================================
+   1. CLASSIC ROBLOX MOUSE CURSORS
+   ========================================================================== */
+
+/* Authentic Classic White Pointer Arrow with Black Contour */
+:root {
+  --roblox-cursor-default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M2,2 L2,20 L7.5,14.5 L12,22 L15,20.5 L10.5,13 L17,13 Z' fill='%23ffffff' stroke='%23000000' stroke-width='1.8' stroke-linejoin='miter'/%3E%3C/svg%3E") 2 2, auto;
+  
+  --roblox-cursor-pointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M9.5,2 C8.7,2 8,2.7 8,3.5 L8,11.5 L6.8,10.2 C6.3,9.7 5.5,9.7 5,10.2 C4.5,10.7 4.5,11.5 5,12 L9.2,16.2 C10,17 11.2,17.5 12.5,17.5 L16,17.5 C18.2,17.5 20,15.7 20,13.5 L20,9.5 C20,8.7 19.3,8 18.5,8 C18.3,8 18.1,8.1 17.9,8.2 C17.6,7.5 16.9,7 16,7 C15.7,7 15.4,7.1 15.1,7.2 C14.8,6.5 14.1,6 13.3,6 C13,6 12.7,6.1 12.5,6.2 L12.5,3.5 C12.5,2.7 11.8,2 11,2 L9.5,2 Z' fill='%23ffffff' stroke='%23000000' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 8 2, pointer;
+  
+  --roblox-cursor-grab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12,2 L12,22 M2,12 L22,12 M12,7 L7,12 L12,17 L17,12 Z' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='2' fill='%23ff3333' stroke='%23000000' stroke-width='1'/%3E%3C/svg%3E") 12 12, move;
+}
+
+/* Global Cursor Classes */
+html, body {
+  cursor: var(--roblox-cursor-default);
+}
+
+button, a, input[type="submit"], input[type="button"], select, label, [role="button"], .cursor-pointer {
+  cursor: var(--roblox-cursor-pointer) !important;
+}
+
+.cursor-grab, .cursor-crosshair {
+  cursor: var(--roblox-cursor-grab) !important;
+}
+
+/* ==========================================================================
+   2. CLASSIC ROBLOX BEVELS & BUTTON STYLING
+   ========================================================================== */
+
+/* Classic Beveled Box Container */
+.roblox-bevel-box {
+  background: linear-[#333333];
+  background: linear-gradient(180deg, #3a3a3a 0%, #242424 100%);
+  border: 2px solid #1a1a1a;
+  border-top-color: #555555;
+  border-left-color: #444444;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.roblox-inset-box {
+  background: #181818;
+  border: 2px solid #0a0a0a;
+  border-top-color: #000000;
+  border-left-color: #0d0d0d;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+}
+
+/* Classic Button Base */
+.roblox-btn {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  display: inline-flex;
+  items-center: center;
+  justify-content: center;
+  transition: transform 0.05s ease, background 0.1s ease;
+  user-select: none;
+}
+
+.roblox-btn:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Classic Metallic Silver Button */
+.roblox-btn-classic {
+  background: linear-gradient(180deg, #5c5c5c 0%, #3a3a3a 50%, #2b2b2b 100%);
+  border: 1px solid #1a1a1a;
+  border-top-color: #787878;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.roblox-btn-classic:hover {
+  background: linear-gradient(180deg, #6e6e6e 0%, #484848 50%, #353535 100%);
+}
+
+/* Classic Roblox Blue Primary Button */
+.roblox-btn-blue {
+  background: linear-gradient(180deg, #5c87de 0%, #3a64c4 50%, #2b4ea6 100%);
+  border: 1px solid #162b60;
+  border-top-color: #8bb1ff;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.roblox-btn-blue:hover {
+  background: linear-gradient(180deg, #6c97ee 0%, #4a74d4 50%, #3b5eb6 100%);
+}
+
+/* Classic Roblox Yellow Play / Buy Button */
+.roblox-btn-gold {
+  background: linear-gradient(180deg, #ffd84d 0%, #f7c229 50%, #df9e0c 100%);
+  border: 1px solid #8f6502;
+  border-top-color: #fff0a3;
+  color: #2b1c00;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.roblox-btn-gold:hover {
+  background: linear-gradient(180deg, #ffe066 0%, #f9cb3c 50%, #eaa819 100%);
+}
+
+/* Classic Red Danger Button */
+.roblox-btn-red {
+  background: linear-gradient(180deg, #e63939 0%, #c41e1e 50%, #9e1111 100%);
+  border: 1px solid #570909;
+  border-top-color: #ff8585;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.roblox-btn-red:hover {
+  background: linear-gradient(180deg, #f54747 0%, #d62727 50%, #b01717 100%);
+}
+
+/* Classic Green Success Button */
+.roblox-btn-green {
+  background: linear-gradient(180deg, #3ebd5a 0%, #2aa044 50%, #1c7a31 100%);
+  border: 1px solid #0e4019;
+  border-top-color: #72e88d;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.roblox-btn-green:hover {
+  background: linear-gradient(180deg, #4dcd69 0%, #32b04c 50%, #238b39 100%);
+}
+
+/* ==========================================================================
+   3. IN-GAME SESSION TOPBAR & HEADER (Classic 2008 Style)
+   ========================================================================== */
+
+.roblox-gaming-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: linear-gradient(180deg, #3c424d 0%, #252930 50%, #191c21 100%);
+  border-bottom: 2px solid #0d0e12;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 3px 8px rgba(0, 0, 0, 0.6);
+  z-index: 40;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.roblox-brand-tile {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #e62020 0%, #b31010 100%);
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.4);
+  transform: rotate(-8deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px #000;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   4. IN-GAME LEADERBOARD WIDGET (Top-Right Classic)
+   ========================================================================== */
+
+.roblox-leaderboard-box {
+  position: absolute;
+  top: 56px;
+  right: 12px;
+  width: 220px;
+  background: rgba(20, 24, 30, 0.88);
+  border: 2px solid #111418;
+  border-top-color: #4a5363;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 8px 16px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  z-index: 30;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.roblox-leaderboard-header {
+  background: linear-gradient(180deg, #363d4a 0%, #212630 100%);
+  border-bottom: 1px solid #111418;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-shadow: 0 1px 2px #000;
+}
+
+.roblox-leaderboard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 8px;
+  font-size: 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.roblox-leaderboard-row.local-player {
+  background: rgba(92, 135, 222, 0.25);
+  border-left: 3px solid #5c87de;
+}
+
+/* ==========================================================================
+   5. IN-GAME HEALTHBAR (Classic Green/Red Top-Right HUD)
+   ========================================================================== */
+
+.roblox-healthbar-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(15, 15, 15, 0.85);
+  border: 1px solid #444;
+  border-top-color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.roblox-healthbar-track {
+  width: 90px;
+  height: 12px;
+  background: #2a0000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.roblox-healthbar-fill {
+  height: 100%;
+  background: linear-gradient(180deg, #52e052 0%, #26a326 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: width 0.2s ease;
+}
+
+/* ==========================================================================
+   6. IN-GAME HOTBAR (Bottom 1-9 Inventory Slots)
+   ========================================================================== */
+
+.roblox-hotbar-bar {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(22, 24, 28, 0.92);
+  border: 2px solid #0a0b0d;
+  border-top-color: #484f5c;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 10px 24px rgba(0, 0, 0, 0.7);
+  padding: 6px;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.roblox-hotbar-slot {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(180deg, #2b303b 0%, #1a1d24 100%);
+  border: 2px solid #0f1115;
+  border-top-color: #404754;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.1s ease;
+}
+
+.roblox-hotbar-slot:hover {
+  background: linear-gradient(180deg, #383e4c 0%, #232730 100%);
+}
+
+.roblox-hotbar-slot.active {
+  background: linear-gradient(180deg, #3f63b0 0%, #203975 100%);
+  border: 2px solid #ffd84d !important;
+  box-shadow: 0 0 12px rgba(255, 216, 77, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.roblox-slot-key {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 800;
+  color: #ffcc00;
+  text-shadow: 0 1px 1px #000;
+}
+
+/* ==========================================================================
+   7. IN-GAME ESC MENU MODAL (Classic Roblox 2008 Style)
+   ========================================================================== */
+
+.roblox-esc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.roblox-esc-modal {
+  width: 100%;
+  max-width: 760px;
+  background: #23272e;
+  border: 3px solid #0d0f12;
+  border-top-color: #555e6e;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 20px 50px rgba(0, 0, 0, 0.85);
+  border-radius: 6px;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.roblox-esc-titlebar {
+  background: linear-gradient(180deg, #5c87de 0%, #355bb0 50%, #244287 100%);
+  border-bottom: 2px solid #14244a;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roblox-esc-tabs {
+  background: #191c22;
+  border-bottom: 2px solid #0d0f12;
+  display: flex;
+  gap: 2px;
+  padding: 6px 12px 0 12px;
+  overflow-x: auto;
+}
+
+.roblox-esc-tab-btn {
+  background: linear-gradient(180deg, #3d4452 0%, #262a33 100%);
+  border: 1px solid #11141a;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c2c9d6;
+  transition: all 0.1s ease;
+}
+
+.roblox-esc-tab-btn:hover {
+  background: linear-gradient(180deg, #4b5466 0%, #303642 100%);
+  color: #ffffff;
+}
+
+.roblox-esc-tab-btn.active {
+  background: linear-gradient(180deg, #5c87de 0%, #375fb3 100%);
+  border-color: #1a3061;
+  color: #ffffff;
+  text-shadow: 0 1px 2px #000;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   8. CHAT BOX CLASSIC STYLING
+   ========================================================================== */
+
+.roblox-chat-box {
+  position: absolute;
+  top: 56px;
+  left: 12px;
+  width: 320px;
+  background: rgba(18, 20, 26, 0.88);
+  border: 2px solid #0a0b0e;
+  border-top-color: #414856;
+  border-radius: 5px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+}
+
+.roblox-chat-header {
+  background: linear-gradient(180deg, #333a47 0%, #1f232c 100%);
+  border-bottom: 1px solid #0a0b0e;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #d1d8e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roblox-chat-input {
+  background: #111318;
+  border: 1px solid #000;
+  border-top-color: #2b303b;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.roblox-chat-input:focus {
+  border-color: #5c87de;
+  box-shadow: 0 0 6px rgba(92, 135, 222, 0.5);
+}
