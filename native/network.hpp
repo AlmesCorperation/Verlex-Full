@@ -1,17 +1,25 @@
 #ifndef VERLEX_NETWORK_HPP
 #define VERLEX_NETWORK_HPP
 
-#include <iostream>
-#include <string>
+#include "packet.hpp"
+
+#include <cstdint>
+#include <netinet/in.h>
 
 class NativeNetworkManager {
 public:
     NativeNetworkManager();
     ~NativeNetworkManager();
-    
-    bool startServer(int port);
-    void sendData(const std::string& data);
-    
+
+    NativeNetworkManager(const NativeNetworkManager&) = delete;
+    NativeNetworkManager& operator=(const NativeNetworkManager&) = delete;
+
+    bool startServer(std::uint16_t port);
+    bool receivePacket(Packet& packet, sockaddr_in* sender = nullptr,
+                       int timeoutMilliseconds = 250) const;
+    bool sendPacket(const Packet& packet, const sockaddr_in& destination) const;
+    bool isRunning() const;
+
 private:
     int sockfd;
 };
