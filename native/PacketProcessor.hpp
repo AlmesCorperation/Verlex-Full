@@ -1,19 +1,16 @@
-#ifndef PACKETPROCESSOR_HPP
-#define PACKETPROCESSOR_HPP
+#ifndef VERLEX_PACKET_PROCESSOR_HPP
+#define VERLEX_PACKET_PROCESSOR_HPP
 
-#include "packet.hpp"
 #include "GameState.hpp"
-
-// Declare Rust function (bridging C++ and Rust)
-extern "C" {
-    void rust_function(); 
-}
+#include "packet.hpp"
 
 class PacketProcessor {
 public:
-    PacketProcessor(GameState& gs) : gameState(gs) {}
-    void processPacket(const Packet& p);
+    explicit PacketProcessor(GameState& state);
+    bool processPacket(const Packet& packet);
+
 private:
     GameState& gameState;
 };
+
 #endif
